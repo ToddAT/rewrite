@@ -2,7 +2,7 @@ require "middleman-gh-pages"
 
 
 desc "Build Middleman Github Pages"
-task :build  do
+task :build_gh  do
 	p "## Building Middleman Github Pages"
 	system "bundle exec rake build"
 end
@@ -17,6 +17,6 @@ end
 
 desc "build and deploy"
 task :publish do
-	Rake::Task["build"].invoke
+	Rake::Task["build_gh"].invoke
 	Rake::Task["deploy"].invoke
 end
