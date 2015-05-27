@@ -7,13 +7,23 @@
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 
     <!-- Use title if it's in the page YAML frontmatter -->
-    <title><%= current_page.data.title || "The Middleman" %></title>
+    <title><%= current_page.data.title || "RewritesRewritesRewrites" %></title>
 
-    <%= stylesheet_link_tag "normalize", "all" %>
+    <%= stylesheet_link_tag "normalize", "rewrite" %>
     <%= javascript_include_tag  "all" %>
   </head>
 
   <body class="<%= page_classes %>">
-    <%= yield %>
+    <header id="site-header">
+      <h1 id="site-name"><a href="#">RewritesRewritesRewrites</a></h1>
+    </header>
+
+    <section id="site-body">
+      <%= yield %>
+    </section>
+
+    <footer id="site-footer">
+
+    </footer>
   </body>
 </html>

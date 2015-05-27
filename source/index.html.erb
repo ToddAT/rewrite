@@ -11,10 +11,26 @@ per_page: 10
 <% end %>
 
 <% page_articles.each_with_index do |article, i| %>
-  <h2><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></h2>
-  <!-- use article.summary(250) if you have Nokogiri available to show just
-       the first 250 characters -->
-  <%= article.body %>
+<section class="article-card">
+  <header class="article-header">
+    <h2 class="article-header-text"><%= link_to article.title, article %></h2>
+    <ul class="article-meta-list">
+      <li class="article-meta-entry"><%= article.date.strftime('%b %e') %></li>
+    </ul>
+  </header>
+  <article class="article-body">
+    <!-- use article.summary(250) if you have Nokogiri available to show just
+     the first 250 characters -->
+    <%= article.summary %>
+    <%= link_to "Keep reading", article, :class => "read-more" %>
+  </article>
+  <footer class="article-card-footer">
+    <ul class="article-share-list">
+      <li class="article-share-item"><a href="#">Twitter</a></li>
+      <li class="article-share-item"><a href="#">Facebook</a></li>
+    </ul>
+  </footer>
+</section>
 <% end %>
 
 <% if paginate %>

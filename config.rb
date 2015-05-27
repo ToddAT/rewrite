@@ -29,6 +29,10 @@ activate :blog do |blog|
   # blog.page_link = "page/{num}"
 end
 
+activate :directory_indexes
+
+activate :livereload
+
 page "/feed.xml", layout: false
 
 ###

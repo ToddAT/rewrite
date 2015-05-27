@@ -1,0 +1,76 @@
+body {
+	font-size: 16px;
+	line-height: 146%;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+article {
+	a {
+		background-color: yellow;
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-size: 250%;
+	line-height: 100%;
+}
+
+p {
+	margin: 1.39em 0;
+}
+
+.article-card {
+	margin: 2em 0;
+	padding: 1em;
+	font-size: 1.5em;
+	line-height: 146%;
+
+	.article-body {
+		position: relative;
+		overflow: hidden;
+		width: 100%;
+		margin-bottom: 1em;
+		padding-bottom: 1em;
+		border-bottom: .1em solid #eee;
+	}
+}
+
+.article-header-text {
+	a {
+		color: inherit;
+	}
+}
+
+.article-meta-list {
+	font-size: 80%;
+	line-height: 146%;
+}
+
+.read-more {
+	display: block;
+	float: right;
+	font-size: 100%;
+	line-height: 100%;
+
+	&:after {
+		content: " \261e";
+	}
+}
+
+
+#site-header, #site-body, #site-footer {
+	max-width: 37.1em;
+	margin: 0 auto;
+}
+
+#site-name {
+	text-align: center;
+
+	a {
+		color: inherit;
+	}
+}
