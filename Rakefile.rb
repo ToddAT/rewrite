@@ -1,22 +1,28 @@
 require "middleman-gh-pages"
 
 
-desc "Build Middleman Github Pages"
-task :build_gh  do
-	p "## Building Middleman Github Pages"
-	system "bundle exec rake build"
+desc "build static pages"
+task :build_gh do
+  p "## Compiling static pages"
+  system "bundle exec rake build"
 end
 
-
-desc "Deploy Middleman Github Pages"
-task :deploy  do
-	p "## Deploying Middleman Github Pages"
-	system "bundle exec rake publish ALLOW_DIRTY=true"
+desc "deploy to github pages"
+task :deploy do
+  p "## Deploying to Github Pages"
+  cd "build" do
+    system "git add -A"
+    message = "Site updated at #{Time.now.utc}"
+    p "## Commiting: #{message}"
+    system "git commit -m \"#{message}\""
+    p "## Pushing generated website"
+    system "git push origin master"
+    p "## Github Pages deploy complete"
+  end
 end
 
-
-desc "build and deploy"
-task :publish do
-	Rake::Task["build_gh"].invoke
-	Rake::Task["deploy"].invoke
+desc "build and deploy to github pages"
+task :publish_gh do
+  Rake::Task["build_gh"].invoke
+  Rake::Task["deploy"].invoke
 end
