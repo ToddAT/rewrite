@@ -1,0 +1,12 @@
+$break-tiny: 320px;
+$break-small: 480px;
+$break-medium: 640px;
+
+@media only screen and (max-width: $break-tiny) {
+	#site-header, #site-body, #site-footer {
+		width: 100%;
+		max-width: 100%;
+		min-width: $break-tiny;
+		padding: 0 1em;
+	}
+}
