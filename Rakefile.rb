@@ -83,6 +83,13 @@ end
 
 desc "Push to Github Pages"
 task :push do
+  message = nil
+
+  cd PROJECT_ROOT do
+    head = `git log --pretty="%h" -n1`.strip
+    message = ["Site updated to #{head}", suffix].compact.join("\n\n")
+  end
+
   cd BUILD_DIR do
     sh 'git add --all'
     if /nothing to commit/ =~ `git status`
