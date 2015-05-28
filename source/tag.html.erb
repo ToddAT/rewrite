@@ -2,10 +2,7 @@
 pageable: true
 per_page: 12
 ---
-<ul class="breadcrumbs-list">
-  <li class="breadcrumbs-item"><a href="/">Home</a></li>
-  <li class="breadcrumbs-item"><%= tagname %></li>
-</ul>
+<h1>Articles tagged '<%= tagname %>'</h1>
 
 <% if paginate && num_pages > 1 %>
   <p>Page <%= page_number %> of <%= num_pages %></p>
@@ -15,39 +12,11 @@ per_page: 12
   <% end %>
 <% end %>
 
-<% page_articles.each_with_index do |article, i| %>
-<section class="article-card">
-  <header class="article-header">
-    <h2 class="article-header-text"><%= link_to article.title, article %></h2>
-    <ul class="article-meta-list">
-      <li class="article-meta-entry article-meta-date"><%= article.date.strftime('%b %e') %></li>
-      <li class="article-meta-entry article-meta-author">By <a href="https://twitter.com/RewritesBlog">Todd (@RewriteBlog)</a></li>
-    </ul>
-  </header>
-  <article class="article-body">
-    <!-- use article.summary(250) if you have Nokogiri available to show just
-     the first 250 characters -->
-    <%= article.summary %>
-    <%= link_to "Keep reading", article, :class => "read-more" %>
-  </article>
-  <footer class="article-card-footer">
-    <ul class="article-tags-list">
-      <% article.tags.each do |tag, articles| %>
-        <li class="article-tag-item">#<%= link_to "#{tag}", tag_path(tag) %></li>
-      <% end %>
-    </ul>
-    <ul class="article-share-list">
-      <li class="article-share-item article-share-header">SHARE:</li>
-      <li class="article-share-item"><a href="https://twitter.com/intent/tweet?url=http://blog.rewrit.es<%= url_for article %>&via=RewriteBlog"><i class="share-icon fa fa-twitter-square"></i></a></li>
-      <li class="article-share-item"><a href="https://www.facebook.com/dialog/feed?
-  app_id=1415954245395368
-  &display=popup&caption=<%= URI.escape(article.title) %> 
-  &link=http://blog.rewrit.es<%= url_for article %>
-  &redirect_uri=http://blog.rewrit.es<%= url_for article %>"><i class="share-icon fa fa-facebook-square"></i></a></li>
-    </ul>
-  </footer>
-</section>
-<% end %>
+<ul>
+  <% page_articles.each_with_index do |article, i| %>
+    <li><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></li>
+  <% end %>
+</ul>
 
 <% if paginate %>
   <% if next_page %>
