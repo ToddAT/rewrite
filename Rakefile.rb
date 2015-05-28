@@ -80,3 +80,16 @@ task :publish => [:not_dirty, :prepare_git_remote_in_build_dir, :sync, :build] d
     sh "git push #{remote_name} gh-pages"
   end
 end
+
+desc "Push to Github Pages"
+task :push do
+  cd BUILD_DIR do
+    sh 'git add --all'
+    if /nothing to commit/ =~ `git status`
+      puts "No changes to commit."
+    else
+      sh "git commit -m \"#{message}\""
+    end
+    sh "git push #{remote_name} gh-pages"
+  end
+end
