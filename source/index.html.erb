@@ -15,7 +15,8 @@ per_page: 10
   <header class="article-header">
     <h2 class="article-header-text"><%= link_to article.title, article %></h2>
     <ul class="article-meta-list">
-      <li class="article-meta-entry"><%= article.date.strftime('%b %e') %></li>
+      <li class="article-meta-entry article-meta-date"><%= article.date.strftime('%b %e') %></li>
+      <li class="article-meta-entry article-meta-author">By <a href="https://twitter.com/RewritesBlog">Todd (@RewriteBlog)</a></li>
     </ul>
   </header>
   <article class="article-body">
@@ -25,9 +26,19 @@ per_page: 10
     <%= link_to "Keep reading", article, :class => "read-more" %>
   </article>
   <footer class="article-card-footer">
+    <ul class="article-tags-list">
+      <% article.tags.each do |tag| %>
+        <li class="article-tag-item">#<%= link_to "#{tag}", tag_path(tag) %></li>
+      <% end %>
+    </ul>
     <ul class="article-share-list">
-      <li class="article-share-item"><a href="#">Twitter</a></li>
-      <li class="article-share-item"><a href="#">Facebook</a></li>
+      <li class="article-share-item article-share-header">SHARE:</li>
+      <li class="article-share-item"><a href="https://twitter.com/intent/tweet?url=http://blog.rewrit.es<%= url_for article %>&via=RewriteBlog"><i class="share-icon fa fa-twitter-square"></i></a></li>
+      <li class="article-share-item"><a href="https://www.facebook.com/dialog/feed?
+  app_id=1415954245395368
+  &display=popup&caption=<%= URI.escape(article.title) %> 
+  &link=http://blog.rewrit.es<%= url_for article %>
+  &redirect_uri=http://blog.rewrit.es<%= url_for article %>"><i class="share-icon fa fa-facebook-square"></i></a></li>
     </ul>
   </footer>
 </section>

@@ -1,6 +1,7 @@
 ---
 title: The Daredevil Wears Prada
 date: 2015-05-27
+image: /images/daredevil.jpg
 tags: TV
 ---
 

@@ -16,3 +16,6 @@ gem "middleman-livereload", "~> 3.3.0"
 
 # Nokogiri for article summaries
 gem "nokogiri", "~> 1.6.6.2"
+
+# Font Awesome
+gem "font-awesome-sass"
