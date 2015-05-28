@@ -7,7 +7,35 @@
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 
     <!-- Use title if it's in the page YAML frontmatter -->
-    <title><%= current_page.data.title || "RewritesRewritesRewrites" %></title>
+    <title><%= current_resource.title + ' | ' if defined? current_resource.title %>RewritesRewritesRewrites</title>
+
+
+    <meta property="og:type" content="article" />
+    <meta name="twitter:site" content="@RewriteBlog">
+    <meta name="twitter:creator" content="@toddterwilliger">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:url" content="http://blog.rewrit.es<%= url_for current_resource %>" />
+    <meta name="twitter:title" content="<%= current_resource.title + ' | ' if defined? current_resource.title %>RewritesRewritesRewrites" />
+    
+    <% if defined? current_resource.summary %>
+    <meta name="twitter:description" content="<%= strip_tags(current_resource.summary) %>" />
+    <meta property="og:description" content="<%= strip_tags(current_resource.summary) %>" />
+    <% else %>
+    <meta name="twitter:description" content="On Writing and Other Creative Arts" />
+    <meta property="og:description" content="On Writing and Other Creative Arts" />
+    <% end %>
+
+    <meta property="og:url" content="http://blog.rewrit.es<%= url_for current_resource %>" />
+    <meta property="og:title" content="<%= current_resource.title + ' | ' if defined? current_resource.title %>RewritesRewritesRewrites" />
+
+    <% if current_resource.data.image %>
+    <meta name="twitter:image" content="<%= "http://blog.rewrit.es" + current_resource.data.image %>" />
+    <meta property="og:image" content="<%= "http://blog.rewrit.es" + current_resource.data.image %>" />
+    <% end %>
+
+    <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
+
+    <link href="http://fonts.googleapis.com/css?family=Droid+Serif:700|Open+Sans+Condensed:300,300italic,700" rel="stylesheet" type="text/css">
 
     <%= stylesheet_link_tag "normalize", "rewrite" %>
     <%= javascript_include_tag  "all" %>
@@ -15,7 +43,7 @@
 
   <body class="<%= page_classes %>">
     <header id="site-header">
-      <h1 id="site-name"><a href="#">RewritesRewritesRewrites</a></h1>
+      <h1 id="site-name"><a href="/">RewritesRewritesRewrites</a></h1>
     </header>
 
     <section id="site-body">
@@ -23,7 +51,7 @@
     </section>
 
     <footer id="site-footer">
-
+        <p id="site-license">&copy; 2015 by the author. All rights reserved.</p>
     </footer>
   </body>
 </html>

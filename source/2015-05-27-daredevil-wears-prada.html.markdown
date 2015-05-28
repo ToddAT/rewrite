@@ -2,6 +2,7 @@
 title: The Daredevil Wears Prada
 date: 2015-05-27
 tags: TV
+image: /images/daredevil.jpg
 ---
 
 I finally finished watching the Daredevil Netflix series over the long weekend. My wife and I binge-watched it in batches as time allowed. I must confess,
