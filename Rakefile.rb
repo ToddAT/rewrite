@@ -84,6 +84,7 @@ end
 desc "Push to Github Pages"
 task :push do
   message = nil
+  suffix = ENV["COMMIT_MESSAGE_SUFFIX"]
 
   cd PROJECT_ROOT do
     head = `git log --pretty="%h" -n1`.strip
