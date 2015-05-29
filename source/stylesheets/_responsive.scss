@@ -82,7 +82,7 @@ $break-large: 1200px;
 	}
 }
 
-@media (-webkit-min-device-pixel-ration: 2), (min-resolution: 192dpi) {
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 	body {
 		font-size: $xl-text;
 	}
