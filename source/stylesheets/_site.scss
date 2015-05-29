@@ -3,6 +3,8 @@ $sans: 'Open Sans Condensed', Helvetica, Arial, sans-serif;
 $link: #FFFC7F;
 $article-link: #FBFCD0;
 $article-link-hover: #FFFC7F;
+$gray: #bcbcbc;
+$dk-gray: #797979;
 
 body {
 	font-size: 16px;
@@ -42,6 +44,10 @@ p {
 
 strong {
 	font-weight: 700;
+}
+
+sup {
+	font-size: 80%;
 }
 
 .breadcrumbs-list {
@@ -128,10 +134,40 @@ strong {
 	}
 }
 
+.footnotes {
+	border-top: 1px dashed #eee;
+	color: $dk-gray;
+	font-size: 80%;
+	counter-reset: footnotes;
+
+	ol, li {
+		list-style-type: decimal;
+	}
+
+	ol {
+		&:before {
+			content: 'FOOTNOTES:';
+		}
+	}
+
+	li {
+		position: relative;
+		margin-left: 1.5em;
+
+		&:before {
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 0;
+			counter-increment: footnotes;
+		}
+	}
+}
+
 .article-tags-list {
 	float: left;
 	font-size: 90%;
-	color: #bcbcbc;
+	color: $gray;
 	text-transform: uppercase;
 
 	a {
@@ -153,7 +189,7 @@ strong {
 		display: block;
 		float: left;
 		margin: 0 .5em;
-		color: #bcbcbc;
+		color: $gray;
 	}
 
 	.article-share-header {
