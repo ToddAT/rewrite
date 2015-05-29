@@ -1,7 +1,12 @@
+$break-min: 320px;
 $break-tiny: 480px;
 $break-small: 580px;
 $break-medium: 640px;
 $break-large: 1200px;
+
+@media only screen and (max-width: $break-large) {
+	
+}
 
 @media only screen and (max-width: $break-medium) {
 	body {
@@ -37,6 +42,13 @@ $break-large: 1200px;
 	}
 }
 
-@media only screen and (max-width: $break-large) {
-	
+@media only screen and (max-width: $break-min) {
+	body {
+		font-size: $reg-text;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		font-size: 140%;
+	}
 }
+
