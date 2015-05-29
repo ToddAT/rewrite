@@ -21,7 +21,10 @@ per_page: 10
   </header>
   <article class="article-body">
     <% if article.data.image %>
-    <img class="article-image" src="<%= article.data.image %>" title="<%= article.title if defined? article.title %>" />
+    <figure class="article-image">
+        <img class="article-image-img" src="<%= article.data.image %>" title="<%= article.title if defined? article.title %>"  alt="<%= article.title if defined? article.title %>" />
+        <figcaption class="article-image-caption"><%= article.title if defined? article.title %></figcaption>
+      </figure>
     <% end %>
 
     <%= article.summary %>

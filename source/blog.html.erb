@@ -9,12 +9,13 @@
 	    </ul>
 	  </header>
 	  <article class="article-body">
-	  	<% defined? 1 ? 'image exists!' : 'no image!' %>
-
-	  	<% if current_article.data.image? %>
-	  		<img class="article-image" src="<%= current_article.data.image %>" title="<%= current_article.title %>" />
+	  	<% if current_article.data.image %>
+	  	<figure class="article-image">
+	  		<img class="article-image-img" src="<%= current_article.data.image %>" title="<%= current_article.title if defined? current_article.title %>"  alt="<%= current_article.title %>" />
+	  		<figcaption class="article-image-caption"><%= current_article.title %></figcaption>
+	  	</figure>
 	  	<% end %>
-	    <%= yield %>
+	    <%= cleanup_readmore(yield) %>
 	  </article>
 	  <footer class="article-footer">
 	    <ul class="article-tags-list">

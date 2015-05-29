@@ -13,4 +13,6 @@ READMORE
 
 **SPOILER WARNING:** *Don't read any further if you don't want to be spoiled about the Daredevil season. You have been warned.*
 
-My main reservations focus on the deaths of major characters, both good and bad, in the lead-up to the final showdown. To put it bluntly, I was disappointed that the writers chose to kill off so many interesting characters.
+My main reservations focus on the deaths of major characters, both good and bad, in the lead-up to the final showdown. To put it bluntly, I was disappointed that the writers chose to kill off so many interesting characters that had been developed over the course of the season.
+
+Probably the biggest of these was the killing of Ben Urich. Urich was [a major figure in the comics](http://en.wikipedia.org/wiki/Ben_Urich)

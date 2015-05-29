@@ -76,11 +76,11 @@ page "/feed.xml", layout: false
 # activate :livereload
 
 # Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+helpers do
+  def cleanup_readmore(html)
+      html.sub(/(READMORE)/, "<span id='readmore'></span>")
+  end
+end
 
 set :css_dir, 'stylesheets'
 
