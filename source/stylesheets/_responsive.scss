@@ -1,12 +1,42 @@
-$break-tiny: 320px;
-$break-small: 480px;
+$break-tiny: 480px;
+$break-small: 580px;
 $break-medium: 640px;
+$break-large: 1200px;
+
+@media only screen and (max-width: $break-medium) {
+	body {
+		font-size: $reg-text;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		font-size: 250%;
+	}
+
+	#site-header, #site-body, #site-footer {
+		width: 95%;
+	}
+}
+
+@media only screen and (max-width: $break-small) {
+	body {
+		font-size: $reg-text;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		font-size: 200%;
+	}
+}
 
 @media only screen and (max-width: $break-tiny) {
-	#site-header, #site-body, #site-footer {
-		width: 100%;
-		max-width: 100%;
-		min-width: $break-tiny;
-		padding: 0 1em;
+	body {
+		font-size: $reg-text;
 	}
+
+	h1, h2, h3, h4, h5, h6 {
+		font-size: 175%;
+	}
+}
+
+@media only screen and (max-width: $break-large) {
+	
 }

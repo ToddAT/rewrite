@@ -1,3 +1,6 @@
+$reg-text: medium;
+$lg-text: large;
+$xl-text: x-large;
 $serif: 'Droid Serif', Georgia, Times, TImes New Roman, serif;
 $sans: 'Open Sans Condensed', Helvetica, Arial, sans-serif;
 $link: #FFFC7F;
@@ -7,7 +10,7 @@ $gray: #bcbcbc;
 $dk-gray: #797979;
 
 body {
-	font-size: 16px;
+	font-size: $lg-text;
 	font-family: $sans;
 	line-height: 146%;
 }
