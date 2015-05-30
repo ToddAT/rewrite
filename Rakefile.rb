@@ -98,6 +98,9 @@ task :push do
     else
       sh "git commit -m \"#{message}\""
     end
-    sh "git push #{remote_name} gh-pages"
+  end
+
+  cd PROJECT_ROOT do
+    sh "git subtree push --prefix build origin gh-pages"
   end
 end
