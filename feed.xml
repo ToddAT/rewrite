@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>RewritesRewritesRewrites</title>
+  <subtitle>On Writing and Other Creative Arts</subtitle>
+  <id>http://blog.rewrit.es/</id>
+  <link href="http://blog.rewrit.es/"/>
+  <link href="http://blog.rewrit.es/feed.xml" rel="self"/>
+  <updated>2015-05-27T20:00:00-04:00</updated>
+  <author>
+    <name>Blog Author</name>
+  </author>
+  <entry>
+    <title>The Daredevil Wears Prada</title>
+    <link rel="alternate" href="http://blog.rewrit.es/2015/05/28/daredevil-wears-prada/"/>
+    <id>http://blog.rewrit.es/2015/05/28/daredevil-wears-prada/</id>
+    <published>2015-05-27T20:00:00-04:00</published>
+    <updated>2015-05-30T09:37:57-04:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <summary type="html">&lt;img href="http://blog.rewrit.es/images/daredevil.jpg" title="The Daredevil Wears Prada" alt="The Daredevil Wears Prada"&gt;&lt;p&gt;I finally finished watching the Daredevil Netflix series over the long weekend. My wife and I binge-watched it in batches as time allowed. I must confess,
+my interest in the series waned over the last handful of episodes but, with a couple of caveats, I did enjoy the series and I am looking forward to what they do
+going forward.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</summary>
+  </entry>
+</feed>
