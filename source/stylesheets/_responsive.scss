@@ -50,6 +50,17 @@ $break-large: 1200px;
 	#site-header, #site-body, #site-footer {
 		width: 95%;
 	}
+
+	@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+		body {
+			font-size: $xl-text;
+		}
+
+		.article-body {
+			font-size: 200%;
+			line-height: 146%;
+		}
+	}
 }
 
 @media only screen and (max-width: $break-small) {
@@ -79,17 +90,6 @@ $break-large: 1200px;
 
 	h1, h2, h3, h4, h5, h6 {
 		font-size: 140%;
-	}
-}
-
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-	body {
-		font-size: $xl-text;
-	}
-
-	.article-body {
-		font-size: 200%;
-		line-height: 146%;
 	}
 }
 

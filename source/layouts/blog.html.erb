@@ -1,18 +1,18 @@
 <% wrap_layout :layout do %>
-  <% if current_article %>
+  <% if defined? current_article %>
 	<section class="article-full">
 	  <header class="article-header">
-	    <h2 class="article-header-text"><%= link_to current_article.title, current_article %></h2>
+	    <h2 class="article-header-text"><%= link_to(current_article.title, current_article) if defined? current_article.title %></h2>
 	    <ul class="article-meta-list">
-	      <li class="article-meta-entry article-meta-date"><%= current_article.date.strftime('%b %e') %></li>
+	      <li class="article-meta-entry article-meta-date"><%= current_article.date.strftime('%b %e') if defined? current_article.date %></li>
       <li class="article-meta-entry article-meta-author">By <a href="https://twitter.com/RewritesBlog">Todd (@RewriteBlog)</a></li>
 	    </ul>
 	  </header>
 	  <article class="article-body">
-	  	<% if current_article.data.image %>
+	  	<% if defined? current_article.data[:image] %>
 	  	<figure class="article-image">
-	  		<img class="article-image-img" src="<%= current_article.data.image %>" title="<%= current_article.title if defined? current_article.title %>"  alt="<%= current_article.title %>" />
-	  		<figcaption class="article-image-caption"><%= current_article.title %></figcaption>
+	  		<img class="article-image-img" src="<%= current_article.data[:image][:url] %>" title="<%= current_article.data[:image][:caption] %>"  alt="<%= current_article.data[:image][:caption] %>" />
+	  		<figcaption class="article-image-caption"><%= current_article.data[:image][:caption] %></figcaption>
 	  	</figure>
 	  	<% end %>
 	    <%= cleanup_readmore(yield) %>

@@ -13,7 +13,7 @@
     <meta property="og:type" content="article" />
     <meta name="twitter:site" content="@RewriteBlog">
     <meta name="twitter:creator" content="@toddterwilliger">
-    <meta name="twitter:url" content="http://blog.rewrit.es<%= url_for current_resource %>" />
+    <meta name="twitter:url" content="http://blog.rewrit.es<%= url_for current_resource if defined? current_resource %>" />
     <meta name="twitter:title" content="<%= current_resource.title + ' | ' if defined? current_resource.title %>RewritesRewritesRewrites" />
     
     <% if defined? current_resource.summary %>
@@ -27,10 +27,10 @@
     <meta property="og:url" content="http://blog.rewrit.es<%= url_for current_resource %>" />
     <meta property="og:title" content="<%= current_resource.title + ' | ' if defined? current_resource.title %>RewritesRewritesRewrites" />
 
-    <% if current_resource.data.image %>
+    <% if current_resource.data[:image] %>
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="<%= "http://blog.rewrit.es" + current_resource.data.image %>" />
-    <meta property="og:image" content="<%= "http://blog.rewrit.es" + current_resource.data.image %>" />
+    <meta name="twitter:image" content="<%= "http://blog.rewrit.es" + current_resource.data.image.url %>" />
+    <meta property="og:image" content="<%= "http://blog.rewrit.es" + current_resource.data.image.url %>" />
     <% else %>
     <meta name="twitter:card" content="summary" />
     <% end %>

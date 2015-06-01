@@ -1,15 +1,15 @@
 ---
-title: The Daredevil Wears Prada
-date: 2015-05-28
-tags: TV
-image: /images/daredevil.jpg
+title : The Daredevil Wears Prada
+date  : 2015-05-28
+tags  : TV
+image :
+     url     : /images/daredevil.jpg
+     caption : Marvel's Daredevil on Netflix
 ---
 
 I finally finished watching the Daredevil Netflix series over the long weekend. My wife and I binge-watched it in batches as time allowed. I must confess,
 my interest in the series waned over the last handful of episodes but, with a couple of caveats, I did enjoy the series and I am looking forward to what they do
-going forward.
-
-READMORE
+going forward.READMORE
 
 **SPOILER WARNING:** *Don't read any further if you don't want to be spoiled about the Daredevil season. You have been warned.*
 
