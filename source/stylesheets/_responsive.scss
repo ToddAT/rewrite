@@ -4,39 +4,7 @@ $break-small: 580px;
 $break-medium: 640px;
 $break-large: 1200px;
 
-@media only screen and (min-width: $break-large) {
 
-	.article-full {
-		.article-body {
-			padding-left: 40%;
-			width: 60%;
-		}
-
-		.article-image {
-			position: relative;
-			overflow: hidden;
-			left: -65%;
-			top: 0;
-			width: 165%;
-			max-height: 100%;
-			margin-top: 0;
-		}
-	}
-
-	#site-header, #site-body, #site-footer {
-		max-width: 80%;
-		margin: 0 auto;
-	}
-
-	.index {
-		#site-header, #site-body, #site-footer {
-			max-width: 37.1em;
-			margin: 0 auto;
-		}
-	}
-
-
-}
 
 @media only screen and (max-width: $break-medium) {
 	body {
@@ -47,7 +15,7 @@ $break-large: 1200px;
 		font-size: 250%;
 	}
 
-	#site-header, #site-body, #site-footer {
+	#site-header, #site-footer {
 		width: 95%;
 	}
 

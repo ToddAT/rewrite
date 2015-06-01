@@ -10,6 +10,10 @@ $gray: #bcbcbc;
 $dk-gray: #797979;
 
 body {
+	width: 100%;
+	min-width: 320px;
+	margin: 0;
+	padding: 0;
 	font-size: $lg-text;
 	font-family: $sans;
 	line-height: 146%;
@@ -72,7 +76,8 @@ sup {
 	}
 
 .article-card, .article-full {
-	margin: 2em 0;
+	max-width: 37.1em;
+	margin: 2em auto;
 	padding: 1em;
 	font-size: 1.5em;
 	line-height: 146%;
@@ -88,6 +93,40 @@ sup {
 
 	&:first-child {
 		margin-top: 0;
+	}
+}
+
+.article-full {
+	width: 100%;
+	max-width: inherit;
+	margin: 0;
+	padding: 0;
+
+	.article-header, .article-body, .article-footer {
+		width: 90%;
+		max-width: 37.1em;
+		margin: 0 auto;
+		padding: 5%;
+	}
+}
+
+#hero-image {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		min-width: 100%;
+		height: auto;
+	}
+
+	#dummy {
+		padding-top: 42.55%;
 	}
 }
 
@@ -204,9 +243,13 @@ sup {
 		}
 
 
-#site-header, #site-body, #site-footer {
+#site-header, #site-footer {
 	max-width: 37.1em;
 	margin: 0 auto;
+}
+
+#site-body {
+	width: 100%;
 }
 
 #site-header {

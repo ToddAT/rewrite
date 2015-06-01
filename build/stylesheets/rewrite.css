@@ -2395,69 +2395,74 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 /* line 12, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
 body {
+  width: 100%;
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
   font-size: large;
   font-family: "Open Sans Condensed", Helvetica, Arial, sans-serif;
   line-height: 146%; }
 
-/* line 18, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
+/* line 22, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
 a {
   color: inherit;
   text-decoration: none;
   transition: all .3s ease-in; }
 
-/* line 25, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
+/* line 29, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
 article a {
   background-color: #FBFCD0; }
-  /* line 28, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
+  /* line 32, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
   article a:hover {
     background-color: #FFFC7F; }
 
-/* line 34, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
+/* line 38, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
 em {
   font-style: italic; }
 
-/* line 38, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
+/* line 42, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Droid Serif", Georgia, Times, TImes New Roman, serif;
   font-size: 250%;
   line-height: 100%; }
 
-/* line 44, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
+/* line 48, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
 p {
   margin: 1.39em 0; }
 
-/* line 48, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
+/* line 52, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
 strong {
   font-weight: 700; }
 
-/* line 52, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
+/* line 56, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
 sup {
   font-size: 80%; }
 
-/* line 56, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
+/* line 60, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
 .breadcrumbs-list {
   display: block;
   width: 100%;
   overflow: hidden; }
 
-/* line 61, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
+/* line 65, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
 .breadcrumbs-item {
   float: left;
   margin-left: .5em; }
-  /* line 65, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
+  /* line 69, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
   .breadcrumbs-item:before {
     content: "\3009"; }
-  /* line 69, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
+  /* line 73, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
   .breadcrumbs-item:first-child {
     margin-left: 0; }
 
-/* line 74, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
+/* line 78, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
 .article-card, .article-full {
-  margin: 2em 0;
+  max-width: 37.1em;
+  margin: 2em auto;
   padding: 1em;
   font-size: 1.5em;
   line-height: 146%; }
-  /* line 80, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
+  /* line 85, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
   .article-card .article-body, .article-full .article-body {
     position: relative;
     overflow: hidden;
@@ -2465,15 +2470,46 @@ sup {
     margin-bottom: .5em;
     padding-bottom: 1em;
     border-bottom: .1em solid #eee; }
-  /* line 89, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
+  /* line 94, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
   .article-card:first-child, .article-full:first-child {
     margin-top: 0; }
 
-/* line 95, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
+/* line 99, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
+.article-full {
+  width: 100%;
+  max-width: inherit;
+  margin: 0;
+  padding: 0; }
+  /* line 105, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
+  .article-full .article-header, .article-full .article-body, .article-full .article-footer {
+    width: 90%;
+    max-width: 37.1em;
+    margin: 0 auto;
+    padding: 5%; }
+
+/* line 113, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
+#hero-image {
+  position: relative;
+  overflow: hidden;
+  width: 100%; }
+  /* line 118, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
+  #hero-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    min-width: 100%;
+    height: auto; }
+  /* line 128, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
+  #hero-image #dummy {
+    padding-top: 42.55%; }
+
+/* line 134, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
 .article-header-text a {
   color: inherit; }
 
-/* line 100, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
+/* line 139, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
 .article-meta-list {
   display: block;
   width: 100%;
@@ -2481,15 +2517,15 @@ sup {
   font-size: 80%;
   line-height: 146%; }
 
-/* line 108, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
+/* line 147, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
 .article-meta-date {
   float: right; }
 
-/* line 112, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
+/* line 151, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
 .article-meta-author {
   float: left; }
 
-/* line 116, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
+/* line 155, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
 .article-image, .article-image-img {
   display: block;
   width: 100%;
@@ -2497,38 +2533,38 @@ sup {
   overflow: hidden;
   margin: 1em 0; }
 
-/* line 124, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
+/* line 163, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
 .article-image-caption {
   display: none; }
 
-/* line 128, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
+/* line 167, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
 .read-more {
   display: block;
   float: right;
   background-color: #FFFC7F;
   font-size: 100%;
   line-height: 100%; }
-  /* line 135, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
+  /* line 174, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
   .read-more:after {
     content: " \261e"; }
 
-/* line 140, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
+/* line 179, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
 .footnotes {
   border-top: 1px dashed #eee;
   color: #797979;
   font-size: 80%;
   counter-reset: footnotes; }
-  /* line 146, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
+  /* line 185, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
   .footnotes ol, .footnotes li {
     list-style-type: decimal; }
-  /* line 151, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
+  /* line 190, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
   .footnotes ol:before {
     content: 'FOOTNOTES:'; }
-  /* line 156, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
+  /* line 195, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
   .footnotes li {
     position: relative;
     margin-left: 1.5em; }
-    /* line 160, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
+    /* line 199, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
     .footnotes li:before {
       display: block;
       position: absolute;
@@ -2536,123 +2572,103 @@ sup {
       top: 0;
       counter-increment: footnotes; }
 
-/* line 170, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
+/* line 209, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
 .article-tags-list {
   float: left;
   font-size: 90%;
   color: #bcbcbc;
   text-transform: uppercase; }
-  /* line 176, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
+  /* line 215, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
   .article-tags-list a {
     color: inherit; }
 
-/* line 181, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
+/* line 220, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
 .article-tags-item {
   float: left; }
 
-/* line 185, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
+/* line 224, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
 .article-share-list {
   display: block;
   overflow: hidden;
   float: right; }
 
-/* line 191, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
+/* line 230, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
 .article-share-item {
   display: block;
   float: left;
   margin: 0 .5em;
   color: #bcbcbc; }
 
-/* line 202, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
+/* line 241, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
 .share-icon {
   font-size: 120%; }
 
-/* line 207, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
-#site-header, #site-body, #site-footer {
+/* line 246, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
+#site-header, #site-footer {
   max-width: 37.1em;
   margin: 0 auto; }
 
-/* line 212, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
+/* line 251, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
+#site-body {
+  width: 100%; }
+
+/* line 255, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
 #site-header {
   margin-bottom: 2em; }
 
-/* line 216, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
+/* line 259, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
 #site-name {
   text-align: center; }
-  /* line 219, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
+  /* line 262, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
   #site-name a {
     color: inherit; }
 
-/* line 224, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
+/* line 267, /Users/toddterwilliger/www/rewrite/source/stylesheets/_site.scss */
 #site-license {
   text-align: center; }
 
-@media only screen and (min-width: 1200px) {
-  /* line 10, /Users/toddterwilliger/www/rewrite/source/stylesheets/_responsive.scss */
-  .article-full .article-body {
-    padding-left: 40%;
-    width: 60%; }
-  /* line 15, /Users/toddterwilliger/www/rewrite/source/stylesheets/_responsive.scss */
-  .article-full .article-image {
-    position: relative;
-    overflow: hidden;
-    left: -65%;
-    top: 0;
-    width: 165%;
-    max-height: 100%;
-    margin-top: 0; }
-
-  /* line 26, /Users/toddterwilliger/www/rewrite/source/stylesheets/_responsive.scss */
-  #site-header, #site-body, #site-footer {
-    max-width: 80%;
-    margin: 0 auto; }
-
-  /* line 32, /Users/toddterwilliger/www/rewrite/source/stylesheets/_responsive.scss */
-  .index #site-header, .index #site-body, .index #site-footer {
-    max-width: 37.1em;
-    margin: 0 auto; } }
 @media only screen and (max-width: 640px) {
-  /* line 42, /Users/toddterwilliger/www/rewrite/source/stylesheets/_responsive.scss */
+  /* line 10, /Users/toddterwilliger/www/rewrite/source/stylesheets/_responsive.scss */
   body {
     font-size: medium; }
 
-  /* line 46, /Users/toddterwilliger/www/rewrite/source/stylesheets/_responsive.scss */
+  /* line 14, /Users/toddterwilliger/www/rewrite/source/stylesheets/_responsive.scss */
   h1, h2, h3, h4, h5, h6 {
     font-size: 250%; }
 
-  /* line 50, /Users/toddterwilliger/www/rewrite/source/stylesheets/_responsive.scss */
-  #site-header, #site-body, #site-footer {
+  /* line 18, /Users/toddterwilliger/www/rewrite/source/stylesheets/_responsive.scss */
+  #site-header, #site-footer {
     width: 95%; } }
-@media only screen and (max-width: 580px) {
-  /* line 56, /Users/toddterwilliger/www/rewrite/source/stylesheets/_responsive.scss */
-  body {
-    font-size: medium; }
-
-  /* line 60, /Users/toddterwilliger/www/rewrite/source/stylesheets/_responsive.scss */
-  h1, h2, h3, h4, h5, h6 {
-    font-size: 200%; } }
-@media only screen and (max-width: 480px) {
-  /* line 66, /Users/toddterwilliger/www/rewrite/source/stylesheets/_responsive.scss */
-  body {
-    font-size: medium; }
-
-  /* line 70, /Users/toddterwilliger/www/rewrite/source/stylesheets/_responsive.scss */
-  h1, h2, h3, h4, h5, h6 {
-    font-size: 175%; } }
-@media only screen and (max-width: 320px) {
-  /* line 76, /Users/toddterwilliger/www/rewrite/source/stylesheets/_responsive.scss */
-  body {
-    font-size: medium; }
-
-  /* line 80, /Users/toddterwilliger/www/rewrite/source/stylesheets/_responsive.scss */
-  h1, h2, h3, h4, h5, h6 {
-    font-size: 140%; } }
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  /* line 86, /Users/toddterwilliger/www/rewrite/source/stylesheets/_responsive.scss */
+@media only screen and (max-width: 640px) and (-webkit-min-device-pixel-ratio: 2), only screen and (max-width: 640px) and (min-resolution: 192dpi) {
+  /* line 23, /Users/toddterwilliger/www/rewrite/source/stylesheets/_responsive.scss */
   body {
     font-size: x-large; }
 
-  /* line 90, /Users/toddterwilliger/www/rewrite/source/stylesheets/_responsive.scss */
+  /* line 27, /Users/toddterwilliger/www/rewrite/source/stylesheets/_responsive.scss */
   .article-body {
     font-size: 200%;
     line-height: 146%; } }
+@media only screen and (max-width: 580px) {
+  /* line 35, /Users/toddterwilliger/www/rewrite/source/stylesheets/_responsive.scss */
+  body {
+    font-size: medium; }
+
+  /* line 39, /Users/toddterwilliger/www/rewrite/source/stylesheets/_responsive.scss */
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 200%; } }
+@media only screen and (max-width: 480px) {
+  /* line 45, /Users/toddterwilliger/www/rewrite/source/stylesheets/_responsive.scss */
+  body {
+    font-size: medium; }
+
+  /* line 49, /Users/toddterwilliger/www/rewrite/source/stylesheets/_responsive.scss */
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 175%; } }
+@media only screen and (max-width: 320px) {
+  /* line 55, /Users/toddterwilliger/www/rewrite/source/stylesheets/_responsive.scss */
+  body {
+    font-size: medium; }
+
+  /* line 59, /Users/toddterwilliger/www/rewrite/source/stylesheets/_responsive.scss */
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 140%; } }

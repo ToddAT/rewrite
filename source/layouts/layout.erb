@@ -5,36 +5,20 @@
 
     <!-- Always force latest IE rendering engine or request Chrome Frame -->
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <% 
+        set_meta_tags url: url_for(current_resource) if defined? current_resource
+        set_meta_tags title: current_resource.title if defined? current_resource.title
+        set_meta_tags description: strip_tags(current_resource.summary) if defined? current_resource.summary
+        set_meta_tags keywords: current_resource.data[:tags] if current_resource.data[:tags]
 
-    <!-- Use title if it's in the page YAML frontmatter -->
-    <title><%= current_resource.title + ' | ' if defined? current_resource.title %>RewritesRewritesRewrites</title>
-
-
-    <meta property="og:type" content="article" />
-    <meta name="twitter:site" content="@RewriteBlog">
-    <meta name="twitter:creator" content="@toddterwilliger">
-    <meta name="twitter:url" content="http://blog.rewrit.es<%= url_for current_resource if defined? current_resource %>" />
-    <meta name="twitter:title" content="<%= current_resource.title + ' | ' if defined? current_resource.title %>RewritesRewritesRewrites" />
-    
-    <% if defined? current_resource.summary %>
-    <meta name="twitter:description" content="<%= strip_tags(current_resource.summary) %>" />
-    <meta property="og:description" content="<%= strip_tags(current_resource.summary) %>" />
-    <% else %>
-    <meta name="twitter:description" content="On Writing and Other Creative Arts" />
-    <meta property="og:description" content="On Writing and Other Creative Arts" />
-    <% end %>
-
-    <meta property="og:url" content="http://blog.rewrit.es<%= url_for current_resource %>" />
-    <meta property="og:title" content="<%= current_resource.title + ' | ' if defined? current_resource.title %>RewritesRewritesRewrites" />
-
-    <% if current_resource.data[:image] %>
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="<%= "http://blog.rewrit.es" + current_resource.data.image.url %>" />
-    <meta property="og:image" content="<%= "http://blog.rewrit.es" + current_resource.data.image.url %>" />
-    <% else %>
-    <meta name="twitter:card" content="summary" />
-    <% end %>
-
+        if current_resource.data[:image]
+            set_meta_tags pull_image: data.site[:url] + current_resource.data[:image].url
+        else
+            set_meta_tags twitter_card: 'summary'
+        end
+    %>
+    <%= auto_display_meta_tags %>
     <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
 
     <link href="http://fonts.googleapis.com/css?family=Droid+Serif:700|Open+Sans+Condensed:300,300italic,700" rel="stylesheet" type="text/css">

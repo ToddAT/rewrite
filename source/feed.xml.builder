@@ -16,7 +16,7 @@ xml.feed "xmlns" => "http://www.w3.org/2005/Atom" do
 
       if article.data.image
         img = Nokogiri::XML::Node.new "img", doc
-        img['href'] = URI.join(site_url, article.data.image)
+        img['href'] = URI.join(site_url, article.data.image.url)
         img['title'] = article.title
         img['alt'] = article.title
         para.add_previous_sibling(img)
